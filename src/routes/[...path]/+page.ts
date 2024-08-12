@@ -8,7 +8,8 @@ export async function load({ params }) {
 
 		return {
 			content: post.default,
-			meta: post.metadata
+			meta: post.metadata,
+			pgname: params.path.length > 0 ? params.path.split('.')[0].replaceAll('/', '_') : 'index'
 		};
 	} catch (e) {
 		console.error(e);
@@ -17,7 +18,8 @@ export async function load({ params }) {
 
 			return {
 				content: post.default,
-				meta: post.metadata
+				meta: post.metadata,
+				pgname: params.path.split('.')[0].replaceAll('/', '_') + (params.path.endsWith('/') ? '' : '_')
 			};
 		} catch (e) {
 			console.error(e);

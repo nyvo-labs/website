@@ -8,4 +8,6 @@
 	<title>{data.meta?.title ?? 'Untitled'} | {name}</title>
 </svelte:head>
 
-<svelte:component this={data.content} />
+<article data-pgname={data.pgname}>
+	<svelte:component this={data.content} />
+</article>

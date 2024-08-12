@@ -11,7 +11,7 @@ There are three pricing tiers for Acridotheres+:
 | Feature                         |      Plus       |       Pro       |       Enterprise       |
 | ------------------------------- | :-------------: | :-------------: | :--------------------: |
 | Price (per month)               |       1 €       |       5 €       | [Contact us](/contact) |
-| Price (per year)                | 10 € (-16% off) | 45 € (-25% off) | [Contact us](/contact) |
+| Price (per year)                | 10 € <span>(-16% off)</span> | 45 € <span>(-25% off)</span> | [Contact us](/contact) |
 | WebAuth tokens\* / month        |       250       |      2000       |         5000+          |
 | Max. active WebAuth entries\*\* |       75        |       750       |         2000+          |
 | Upload storage                  |      32 GB      |     128 GB      |         2 TB+          |

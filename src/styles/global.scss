@@ -7,3 +7,45 @@
 .prose-invert {
 	--tw-prose-invert-body: #fff;
 }
+
+[data-pgname="plus_pricing"] {
+	tr {
+		&>*:first-child {
+			border-right: 1px solid #475569;
+		}
+
+		&:nth-child(2)>td>span{
+			opacity: 0.75;
+			display: block;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@keyframes fancy-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fancy {
+  background: linear-gradient(318deg, #1b6da4 0%, #23aeb5 50%, #1b6da4 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: fancy-bg 3s linear infinite;
+}
+
+.fancy-bg {
+  background: linear-gradient(318deg, #1b6da4 0%, #23aeb5 50%, #1b6da4 100%);
+  background-size: 200% 200%;
+  animation: fancy-bg 3s linear infinite;
+}
