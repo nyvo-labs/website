@@ -1,24 +1,39 @@
 {
-	"name": "Your Website Name",
+	"name": "Acridotheres",
 	"nav": [
-		{
-			"title": "Home",
-			"url": "/"
-		},
 		{
 			"title": "About",
 			"url": "/about"
 		},
 		{
-			"title": "Contact",
-			"url": "/contact"
+			"title": "Features",
+			"url": "/features"
+		},
+		{
+			"title": "Acridotheres+",
+			"url": "/plus"
+		},
+		{
+			"title": "Donate",
+			"url": "/donate"
+		}
+	],
+	"buttons": [
+		{
+			"title": "Download",
+			"url": "/download",
+			"highlight": true
+		},
+		{
+			"title": "Source Code",
+			"url": "/source"
 		}
 	],
 	"footer": {
 		"copyright": {
-			"owner": "Your Name",
+			"owner": "Leonard Lesinski",
 			"since": 2024,
-			"url": "https://example.com/"
+			"url": "https://leox.dev/"
 		}
 	}
 }

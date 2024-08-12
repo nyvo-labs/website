@@ -8,9 +8,7 @@ export default {
 		extend: {},
 
 		fontFamily: {
-			sans: ['Noto Sans', 'sans-serif', 'Noto Color Emoji'],
-			serif: ['Noto Serif', 'serif', 'Noto Color Emoji'],
-			mono: ['Noto Sans Mono', 'monospace', 'Noto Color Emoji']
+			sans: ['Readex Pro Variable', 'sans-serif', 'Noto Color Emoji'],
 		}
 	},
 
