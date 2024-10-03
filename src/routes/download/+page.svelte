@@ -10,11 +10,12 @@
 
 <h2>Acridotheres (Desktop)</h2>
 
-<a href="https://pcky.cc/dl/~@acridotheres">Get here</a>
+<a href="https://ghr.packify.dev/acridotheres/latest">Get here</a>
 
 <h2>Acridotheres (CLI)</h2>
 
-<a href="https://pcky.cc/dl/~-cli@acridotheres">Get here</a>
+<a href="https://ghr.packify.dev/acridotheres/~-cli/latest">Get here</a>
+<!-- https://pcky.cc/dl/~-cli@acridotheres -->
 <!-- URL will resolve to https://packages.packify.dev/acridotheres/acridotheres-cli/download -->
 <!-- APT repo URL will be https://apt.pcky.cc/apt stable -->
 <!-- pacman repo URL will be https://arch.pcky.cc/acridotheres/stable/os/$arch -->
