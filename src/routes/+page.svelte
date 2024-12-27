@@ -19,7 +19,7 @@
 
 <div class="mb-16 flex items-center">
 	<div class="flex flex-auto flex-col justify-center">
-		<h1 class="m-0 text-4xl font-normal">Supports Over <span class="fancy font-semibold">100 Formats</span></h1>
+		<h1 class="m-0 text-4xl font-normal">Supports Over <span class="fancy font-semibold">10 Formats</span></h1>
 		<p class="mb-0 text-xl">
 			Acridotheres offers compatibility with more than 100 file formats, ensuring you can work with
 			virtually any archive you encounter. Whether it's legacy formats like ZIP or RAR, or more
