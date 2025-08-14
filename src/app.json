@@ -1,5 +1,5 @@
 {
-	"name": "Acridotheres",
+	"name": "Nyvo",
 	"nav": [
 		{
 			"title": "About",
@@ -8,10 +8,6 @@
 		{
 			"title": "Features",
 			"url": "/features"
-		},
-		{
-			"title": "Acridotheres+",
-			"url": "/plus"
 		},
 		{
 			"title": "Donate",

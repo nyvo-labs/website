@@ -1,29 +1,29 @@
 <svelte:head>
-  <title>Download | Acridotheres</title>
+	<title>Download | Nyvo</title>
 </svelte:head>
 
-<h1>Download Acridotheres</h1>
+<h1>Download Nyvo</h1>
 
-<p><b>Note:</b> Acridotheres is not available for download yet, but you can build it from source.</p>
+<p><b>Note:</b> Nyvo is not available for download yet, but you can build it from source.</p>
 
-<p>Download the latest version of Acridotheres for your platform.</p>
+<p>Download the latest version of Nyvo for your platform.</p>
 
-<h2>Acridotheres (Desktop)</h2>
+<h2>Nyvo (Desktop)</h2>
 
-<a href="https://ghr.packify.dev/acridotheres/latest">Get here</a>
+<a href="https://github.com/nyvo-labs/nyvo/releases/latest">Get here</a>
 
-<h2>Acridotheres (CLI)</h2>
+<h2>Nyvo (CLI)</h2>
 
-<a href="https://ghr.packify.dev/acridotheres/~-cli/latest">Get here</a>
+<a href="https://github.com/nyvo-labs/cli/releases/latest">Get here</a>
 <!-- https://pcky.cc/dl/~-cli@acridotheres -->
 <!-- URL will resolve to https://packages.packify.dev/acridotheres/acridotheres-cli/download -->
 <!-- APT repo URL will be https://apt.pcky.cc/apt stable -->
 <!-- pacman repo URL will be https://arch.pcky.cc/acridotheres/stable/os/$arch -->
 
-<h2>Acridotheres (Mobile)</h2>
+<h2>Nyvo (Mobile)</h2>
 
-<a href="https://play.google.com/store/apps/details?id=com.acridotheres">Get here (Android only)</a>
+<a href="https://play.google.com/store/apps/details?id=dev.leox.nyvo">Get here (Android only)</a>
 
-<h2>Acridotheres (PWA)</h2>
+<h2>Nyvo (PWA)</h2>
 
-<a href="https://web.acridotheres.com/">Open</a>
+<a href="https://web.nyvo.rocks/">Open</a>

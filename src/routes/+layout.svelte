@@ -10,13 +10,15 @@
 	<title>Untitled | {app.name}</title>
 </svelte:head>
 
-<div class="w-full h-12 bg-black"></div>
+<div class="h-12 w-full bg-black"></div>
 
 <!-- TODO: add navigation for mobile -->
-<nav class="fixed left-0 top-0 flex h-12 w-full bg-transparent text-white backdrop-blur-lg border-b-neutral-500 border-b">
+<nav
+	class="fixed left-0 top-0 flex h-12 w-full border-b border-b-neutral-500 bg-transparent text-white backdrop-blur-lg"
+>
 	<a href="/" class="flex">
 		<header class="flex w-fit items-center gap-2 px-2 py-2">
-			<img src="/favicon.png" alt="{app.name} logo" class="size-8" />
+			<img src="/logo.svg" alt="{app.name} logo" class="size-8" />
 			<h1 class="text-xl font-medium">{app.name}</h1>
 		</header>
 	</a>
@@ -35,11 +37,12 @@
 	</ul>
 	<ul class="mr-2 flex items-center gap-2">
 		{#each app.buttons as { title, url, highlight }}
-			<li
-				class="flex h-6 items-center"
-			>
-				<a href={url} class="transition border-white border-2 px-2 py-1 rounded-lg font-bold {highlight ? 'bg-white text-black hover:text-white hover:bg-teal-600 hover:border-teal-600' : 'hover:bg-white hover:text-black'}"
-					>{title}</a
+			<li class="flex h-6 items-center">
+				<a
+					href={url}
+					class="rounded-lg border-2 border-white px-2 py-1 font-bold transition {highlight
+						? 'bg-white text-black hover:border-teal-600 hover:bg-teal-600 hover:text-white'
+						: 'hover:bg-white hover:text-black'}">{title}</a
 				>
 			</li>
 		{/each}

@@ -4,7 +4,7 @@ title: Support the development
 
 # Support the development
 
-You can support the development of Acridotheres by donating to us.
+You can support the development of Nyvo by donating to us.
 
 ## Directly support the project
 
