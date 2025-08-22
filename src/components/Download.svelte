@@ -2,6 +2,13 @@
 	import { UAParser, type IOS, type ICPU } from 'ua-parser-js';
 	import { onMount } from 'svelte';
 	import { Grid2x2, TreePalm } from 'lucide-svelte';
+	import {
+		SiApple,
+		SiArchlinux,
+		SiDebian,
+		SiFedora,
+		SiLinux
+	} from '@icons-pack/svelte-simple-icons';
 
 	let osData: IOS = $state({} as IOS);
 	let cpuData: ICPU = $state({} as ICPU);
@@ -51,12 +58,17 @@
 <p class="mb-1 text-center text-xs font-semibold text-white uppercase">download for</p>
 
 <div class="flex w-full items-center justify-center gap-2 text-white">
-	<div
-		class="flex aspect-5/1 h-12 items-center gap-2 rounded-lg bg-white p-2 px-3 text-green-600 transition hover:bg-green-600 hover:text-white"
+	<a
+		class="flex aspect-5/1 h-12 items-center gap-2 rounded-lg bg-white p-2 px-3 text-black transition hover:bg-sky-600 hover:text-white"
+		href={links[os?.toLowerCase() ?? '']?.[cpu ?? ''] ?? '/download'}
 	>
 		<div>
 			{#if os?.includes('Win')}
 				<Grid2x2 />
+			{:else if os?.includes('macOS')}
+				<SiApple size={20} />
+			{:else if os?.includes('Linux')}
+				<SiLinux size={20} />
 			{:else}
 				<TreePalm />
 			{/if}
@@ -81,12 +93,41 @@
 					macOS 10.13 or newer
 				{:else if os?.includes('Linux')}
 					Debian oldstable or newer
+				{:else}
+					see all options
 				{/if}
 			</h4>
 		</div>
-	</div>
+	</a>
 
-	<a href="/download" class="uppercase hover:underline">more</a>
+	<span>or</span>
+
+	{#if !os?.includes('Win')}
+		<a href={links.windows[cpu ?? ''] ?? '/download'}>
+			<Grid2x2 />
+		</a>
+	{/if}
+	{#if !os?.includes('macOS')}
+		<a href={links.macos[cpu ?? ''] ?? '/download'}>
+			<SiApple size={20} />
+		</a>
+	{/if}
+	{#if !os?.includes('Linux')}
+		<a href={links.linux[(cpu ?? '') + '_tar'] ?? '/download'}>
+			<SiLinux size={20} />
+		</a>
+	{/if}
+	<a href={links.linux[(cpu ?? '') + '_deb'] ?? '/download'}>
+		<SiDebian size={20} />
+	</a>
+	<a href={links.linux[(cpu ?? '') + '_rpm'] ?? '/download'}>
+		<SiFedora size={20} />
+	</a>
+	<a href={links.linux.aur}>
+		<SiArchlinux size={20} />
+	</a>
+
+	<a href="/download" class="text-xs font-bold uppercase hover:underline">more</a>
 </div>
 
 <p class="mt-1 scale-80 text-center text-xs font-thin text-white uppercase">

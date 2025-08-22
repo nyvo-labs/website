@@ -42,6 +42,7 @@
 	"dependencies": {
 		"@fontsource/mozilla-headline": "^5.2.1",
 		"@fontsource/mozilla-text": "^5.2.1",
+		"@icons-pack/svelte-simple-icons": "^6.4.0",
 		"@tailwindcss/vite": "^4.1.12",
 		"ua-parser-js": "^2.0.4"
 	}
