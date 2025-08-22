@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Mozilla Text', sans-serif, 'Noto Color Emoji';
+	--font-serif: 'Mozilla Headline', sans-serif, 'Noto Color Emoji';
+}
