@@ -55,12 +55,20 @@
 	};
 </script>
 
-<p class="mb-1 text-center text-xs font-semibold text-white uppercase">download for</p>
+<p class="mb-3 text-center text-xs font-semibold text-white uppercase sm:mb-1">download for</p>
 
-<div class="flex w-full items-center justify-center gap-2 text-white">
+<div class="flex w-full flex-col items-center justify-center gap-2 text-white sm:flex-row">
 	<a
 		class="flex aspect-5/1 h-12 items-center gap-2 rounded-lg bg-white p-2 px-3 text-black transition hover:bg-sky-600 hover:text-white"
-		href={links[os?.toLowerCase() ?? '']?.[cpu ?? ''] ?? '/download'}
+		href={links[
+			os?.includes('Win')
+				? 'windows'
+				: os?.includes('macOS')
+					? 'macOS'
+					: os?.includes('Linux')
+						? 'linux'
+						: ''
+		]?.[cpu + (os?.includes('Linux') ? '_tar' : '')] ?? '/download'}
 	>
 		<div>
 			{#if os?.includes('Win')}
@@ -102,30 +110,32 @@
 
 	<span>or</span>
 
-	{#if !os?.includes('Win')}
-		<a href={links.windows[cpu ?? ''] ?? '/download'}>
-			<Grid2x2 />
+	<div class="flex items-center gap-3">
+		{#if !os?.includes('Win')}
+			<a href={links.windows[cpu ?? ''] ?? '/download'}>
+				<Grid2x2 />
+			</a>
+		{/if}
+		{#if !os?.includes('macOS')}
+			<a href={links.macos[cpu ?? ''] ?? '/download'}>
+				<SiApple size={20} />
+			</a>
+		{/if}
+		{#if !os?.includes('Linux')}
+			<a href={links.linux[(cpu ?? '') + '_tar'] ?? '/download'}>
+				<SiLinux size={20} />
+			</a>
+		{/if}
+		<a href={links.linux[(cpu ?? '') + '_deb'] ?? '/download'}>
+			<SiDebian size={20} />
 		</a>
-	{/if}
-	{#if !os?.includes('macOS')}
-		<a href={links.macos[cpu ?? ''] ?? '/download'}>
-			<SiApple size={20} />
+		<a href={links.linux[(cpu ?? '') + '_rpm'] ?? '/download'}>
+			<SiFedora size={20} />
 		</a>
-	{/if}
-	{#if !os?.includes('Linux')}
-		<a href={links.linux[(cpu ?? '') + '_tar'] ?? '/download'}>
-			<SiLinux size={20} />
+		<a href={links.linux.aur}>
+			<SiArchlinux size={20} />
 		</a>
-	{/if}
-	<a href={links.linux[(cpu ?? '') + '_deb'] ?? '/download'}>
-		<SiDebian size={20} />
-	</a>
-	<a href={links.linux[(cpu ?? '') + '_rpm'] ?? '/download'}>
-		<SiFedora size={20} />
-	</a>
-	<a href={links.linux.aur}>
-		<SiArchlinux size={20} />
-	</a>
+	</div>
 
 	<a href="/download" class="text-xs font-bold uppercase hover:underline">more</a>
 </div>

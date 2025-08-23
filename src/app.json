@@ -10,6 +10,14 @@
 			"url": "/features"
 		},
 		{
+			"title": "Docs",
+			"url": "/features"
+		},
+		{
+			"title": "Community",
+			"url": "https://github.com/orgs/nyvo-labs/discussions"
+		},
+		{
 			"title": "Donate",
 			"url": "/donate"
 		}
